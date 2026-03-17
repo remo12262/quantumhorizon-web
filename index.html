@@ -177,14 +177,17 @@ section {
 
 .prod {
   flex: 1;
-  border: 1px solid #222;
+  border: 1px solid rgba(255, 215, 0, 0.25); /* cornice gialla chiara */
   padding: 20px;
   text-decoration: none;
   color: white;
+  transition: 0.3s;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)); /* opzione */
 }
 
 .prod:hover {
   border-color: gold;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
 }
 
 .prod-name {
