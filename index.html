@@ -3,22 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>QuantumHorizon — AI & Quantum Intelligence Hub</title>
-<meta name="description" content="QuantumHorizon è la startup italiana che sviluppa piattaforme AI per la difesa post-quantistica, la cybersecurity istituzionale e l'automazione dei processi pubblici.">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* --- Qui va tutto il CSS che già avevi --- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-/* ... [omesso per brevità, inserire tutto il tuo CSS originale] ... */
+body {
+  margin: 0;
+  font-family: 'Syne', sans-serif;
+  background: #0b0b0f;
+  color: #fff;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-cta {
+  color: gold;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  padding: 100px 40px;
+  max-width: 900px;
+}
+
+.hero-h1 {
+  font-size: 56px;
+  line-height: 1.1;
+}
+
+.hero-h1 em {
+  color: gold;
+  font-style: normal;
+}
+
+.hero-p {
+  margin-top: 20px;
+  color: #aaa;
+  font-size: 18px;
+}
+
+.hero-btns {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-gold {
+  background: gold;
+  color: black;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-ghost {
+  border: 1px solid #555;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* SEZIONI */
+section {
+  padding: 80px 40px;
+}
+
+.sec-h2 {
+  font-size: 36px;
+}
+
+/* PRODOTTI */
+.prod {
+  display: block;
+  border: 1px solid #222;
+  padding: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.prod:hover {
+  border-color: gold;
+}
+
+.prod-name {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.prod-desc {
+  color: #aaa;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px;
+  border-top: 1px solid #222;
+  text-align: center;
+  color: #777;
+}
 </style>
+
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">
-    <div class="nav-hex">QH</div>
-    <span class="nav-wordmark">QuantumHorizon</span>
-  </a>
+  <div class="nav-logo">QuantumHorizon</div>
   <ul class="nav-links">
     <li><a href="#products">Prodotti</a></li>
     <li><a href="#mission">Mission</a></li>
@@ -28,143 +147,62 @@
 </nav>
 
 <section class="hero">
-  <div class="hero-lines"><span></span><span></span><span></span></div>
-  <div class="hero-eyebrow">Italian AI & Quantum Defense Startup · Fondato 2025</div>
-  <h1 class="hero-h1">Il futuro della<br>sicurezza digitale<br><em>inizia qui</em></h1>
-  <p class="hero-p">QuantumHorizon è la startup italiana che sviluppa piattaforme AI per la difesa post-quantistica, la cybersecurity istituzionale e l'automazione dei processi pubblici italiani ed europei.</p>
+  <h1 class="hero-h1">
+    Il futuro della<br>sicurezza digitale<br><em>inizia qui</em>
+  </h1>
+
+  <p class="hero-p">
+    QuantumHorizon sviluppa piattaforme AI per la difesa post-quantistica,
+    la cybersecurity istituzionale e l'automazione dei processi pubblici.
+  </p>
+
   <div class="hero-btns">
-    <a href="#products" class="btn-gold">Esplora i prodotti →</a>
+    <a href="#products" class="btn-gold">Esplora prodotti →</a>
     <a href="#investors" class="btn-ghost">Per investitori</a>
-  </div>
-  <div class="hero-bar">
-    <div><div class="stat-n">3<b>+</b></div><div class="stat-l">Prodotti AI attivi</div></div>
-    <div><div class="stat-n">NIST<b> ready</b></div><div class="stat-l">FIPS 203 / 204 / 205</div></div>
-    <div><div class="stat-n">100<b>%</b></div><div class="stat-l">Made in Italy</div></div>
-    <div><div class="stat-n">2025</div><div class="stat-l">Anno di fondazione</div></div>
   </div>
 </section>
 
 <section id="products">
-  <div class="sec-head">
-    <span class="sec-tag">La nostra famiglia di prodotti</span>
-    <h2 class="sec-h2">Tecnologia AI per istituzioni,<br><em>imprese e pubblica amministrazione</em></h2>
-  </div>
+  <h2 class="sec-h2">Prodotti</h2>
 
-  <a href="https://qstrategix.com" target="_blank" class="featured">
-    <div class="fp-l">
-      <div class="fp-badge">Prodotto Flagship · Live</div>
-      <div class="fp-name">Q-STRATEGIX</div>
-      <div class="fp-domain">qstrategix.com</div>
-      <p class="fp-desc">La piattaforma italiana di quantum defense intelligence. Valutazione del rischio post-quantistico, analisi gap NIST, threat modeling HNDL e roadmap di migrazione crittografica per enti governativi, forze armate e infrastrutture critiche.</p>
-      <div class="fp-tags">
-        <span class="fp-tag">Post-Quantum Cryptography</span>
-        <span class="fp-tag">NIST FIPS 203/204/205</span>
-        <span class="fp-tag">Defense Intelligence</span>
-        <span class="fp-tag">ENISA</span>
-        <span class="fp-tag">ACN</span>
-        <span class="fp-tag">Harvest Now Decrypt Later</span>
-      </div>
-    </div>
-    <div class="fp-r">
-      <div>
-        <div class="fp-quote">"La minaccia quantistica è reale.<br>Q-STRATEGIX è la risposta italiana."</div>
-        <ul class="fp-list">
-          <li>Analisi gap rispetto agli standard NIST post-quantum</li>
-          <li>Modellazione della minaccia Harvest Now, Decrypt Later</li>
-          <li>Roadmap di migrazione crittografica personalizzata</li>
-          <li>Conformità ENISA e ACN Strategia Nazionale 2022–2026</li>
-          <li>Dashboard di rischio per CISO e board istituzionali</li>
-        </ul>
-      </div>
-      <a href="https://qstrategix.com" target="_blank" class="fp-cta">Accedi alla piattaforma →</a>
+  <a href="https://qstrategix.com" target="_blank" class="prod">
+    <div class="prod-name">Q-STRATEGIX</div>
+    <div class="prod-desc">
+      Piattaforma di quantum defense intelligence per analisi rischio post-quantistico.
     </div>
   </a>
 
-  <div class="prods-row">
-    <a href="https://qcryptohub.com" target="_blank" class="prod">
-      <div class="prod-num">02</div>
-      <span class="prod-flag flag-new">★ Nuovo</span>
-      <div class="prod-name">Procurement AI</div>
-      <div class="prod-domain">qcryptohub.com</div>
-      <p class="prod-desc">Generatore intelligente di documentazione per appalti pubblici italiani. Capitolati tecnici, relazioni, policy NIS2/GDPR e offerte conformi al D.Lgs. 36/2023 — prodotte in minuti con AI.</p>
-      <div class="prod-tags">
-        <span class="prod-tag">Appalti Pubblici</span>
-        <span class="prod-tag">D.Lgs. 36/2023</span>
-        <span class="prod-tag">NIS2</span>
-        <span class="prod-tag">PNRR</span>
-        <span class="prod-tag">GovTech</span>
-      </div>
-      <div class="prod-arrow">↗</div>
-    </a>
+  <a href="https://qcryptohub.com" target="_blank" class="prod">
+    <div class="prod-name">Procurement AI</div>
+    <div class="prod-desc">
+      Generazione automatica documenti per appalti pubblici con AI.
+    </div>
+  </a>
 
-    <a href="https://quantumcyberlabs.com" target="_blank" class="prod">
-      <div class="prod-num">03</div>
-      <span class="prod-flag flag-soon">In arrivo</span>
-      <div class="prod-name">QuantumCyberLabs</div>
-      <div class="prod-domain">quantumcyberlabs.com</div>
-      <p class="prod-desc">Laboratorio AI per threat intelligence avanzata. Analisi automatica di vulnerabilità, incident response assistito e briefing esecutivi per CISO e board aziendali.</p>
-      <div class="prod-tags">
-        <span class="prod-tag">Threat Intel</span>
-        <span class="prod-tag">SOC</span>
-        <span class="prod-tag">CISO</span>
-        <span class="prod-tag">AI</span>
-      </div>
-      <div class="prod-arrow" style="color:var(--muted);">→</div>
-    </a>
-  </div>
+  <a href="https://quantumcyberlabs.com" target="_blank" class="prod">
+    <div class="prod-name">QuantumCyberLabs</div>
+    <div class="prod-desc">
+      Threat intelligence avanzata e analisi vulnerabilità.
+    </div>
+  </a>
 </section>
 
 <section id="mission">
-  <div class="mission-wrap">
-    <div>
-      <blockquote class="mission-quote">"Viviamo nell'era in cui i computer quantistici renderanno obsoleta la crittografia attuale. QuantumHorizon esiste per preparare l'Italia a questo momento."</blockquote>
-      <p class="mission-body">Fondata nel 2025, QuantumHorizon nasce dall'urgenza di colmare il divario tra la ricerca sulla crittografia post-quantistica e la sua applicazione concreta nelle istituzioni, nelle aziende e nella pubblica amministrazione italiana. I nostri strumenti AI rendono accessibile una tecnologia altrimenti riservata a pochi specialisti.</p>
-    </div>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pillar-icon">🔐</div>
-        <div class="pillar-t">Difesa Post-Quantistica</div>
-        <div class="pillar-d">Proteggiamo le infrastrutture critiche dagli algoritmi quantistici di nuova generazione, in anticipo sulla minaccia.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🤖</div>
-        <div class="pillar-t">AI per la PA italiana</div>
-        <div class="pillar-d">Automatizziamo i processi documentali della pubblica amministrazione, riducendo tempi e costi delle procedure pubbliche.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🇮🇹</div>
-        <div class="pillar-t">Sovranità tecnologica</div>
-        <div class="pillar-d">Tecnologia italiana per l'Italia, allineata alle strategie ACN, ENISA e alle direttive europee NIS2.</div>
-      </div>
-    </div>
-  </div>
+  <h2 class="sec-h2">Mission</h2>
+  <p class="hero-p">
+    Preparare istituzioni e aziende alla rivoluzione della crittografia post-quantistica.
+  </p>
 </section>
 
 <section id="investors">
-  <div class="inv-wrap">
-    <span class="sec-tag">Per investitori</span>
-    <h2 class="inv-h2">Investi nel futuro<br><em>della sicurezza digitale</em></h2>
-    <p class="inv-sub">QuantumHorizon opera in uno dei mercati a più rapida crescita al mondo. La cybersecurity post-quantistica è una priorità strategica per governi e aziende entro il 2030.</p>
-    <div class="inv-grid">
-      <div class="inv-box"><span class="inv-n">€1T+</span><span class="inv-l">Mercato globale quantum security 2030</span></div>
-      <div class="inv-box"><span class="inv-n">2030</span><span class="inv-l">Deadline NIST migrazione obbligatoria</span></div>
-      <div class="inv-box"><span class="inv-n">3+</span><span class="inv-l">Prodotti AI in sviluppo o live</span></div>
-    </div>
-    <a href="mailto:invest@quantumhub.tech" class="btn-gold">Richiedi il pitch deck →</a>
-  </div>
+  <h2 class="sec-h2">Investitori</h2>
+  <p class="hero-p">
+    Il mercato della cybersecurity post-quantistica è destinato a crescere rapidamente entro il 2030.
+  </p>
 </section>
 
 <footer>
-  <div class="footer-left">
-    <div class="footer-hex">QH</div>
-    <span class="footer-name">QuantumHorizon</span>
-  </div>
-  <div class="footer-links">
-    <a href="https://qstrategix.com" target="_blank">Q-STRATEGIX</a>
-    <a href="https://qcryptohub.com" target="_blank">Procurement AI</a>
-    <a href="mailto:info@quantumhub.tech">Contatti</a>
-  </div>
-  <span class="footer-copy">© 2025 QuantumHorizon · quantumhub.tech · Tutti i diritti riservati</span>
+  © 2025 QuantumHorizon · Tutti i diritti riservati
 </footer>
 
 </body>
