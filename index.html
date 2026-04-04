@@ -31,7 +31,7 @@
   }
 
   .nav-hex {
-    background: #FFD700; /* giallo più forte */
+    background: #FFD700;
     color: black;
     padding: 3px 6px;
     font-weight: 700;
@@ -39,7 +39,7 @@
 
   .nav-wordmark {
     font-weight: 600;
-    color: #FFD700; /* logo giallo più brillante */
+    color: #FFD700;
   }
 
   .nav-links {
@@ -138,7 +138,7 @@
   .sec-h2 {
     font-size: 42px;
     margin-bottom: 30px;
-    color: #FFD700; /* titolo sezione giallo più forte */
+    color: #FFD700;
   }
 
   .featured {
@@ -187,18 +187,51 @@
   .prod-name {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #FFD700; /* nome prodotto giallo più brillante */
+    color: #FFD700;
   }
 
   .prod-desc {
     color: #ccc;
   }
 
+  /* SENTINELLAAI — card speciale con badge NUOVO */
+  .prod-sentinella {
+    flex: 1;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    border-left: 1.5px solid #1D9E75;
+    transition: 0.3s;
+    background: linear-gradient(180deg, rgba(29,158,117,0.06), rgba(29,158,117,0));
+    position: relative;
+  }
+
+  .prod-sentinella:hover {
+    border-color: #5DCAA5;
+  }
+
+  .prod-sentinella .prod-name {
+    color: #1D9E75;
+  }
+
+  .prod-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    background: #1D9E75;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
   .mission-quote {
     font-size: 26px;
     font-family: 'Cormorant Garamond', serif;
     margin-bottom: 20px;
-    color: #FFD700; /* quote giallo più forte */
+    color: #FFD700;
   }
 
   .mission-body {
@@ -214,14 +247,14 @@
   .inv-box {
     flex: 1;
     padding: 20px;
-    border: 2px solid #FFD700; /* bordo giallo */
+    border: 2px solid #FFD700;
     border-radius: 6px;
     text-align: center;
   }
 
   .inv-n {
     font-size: 28px;
-    color: #FFD700; /* numeri gialli */
+    color: #FFD700;
     font-weight: 600;
   }
 
@@ -257,7 +290,7 @@
     <a href="#investors" class="btn-ghost">Per investitori</a>
   </div>
   <div class="hero-bar">
-    <div><div class="stat-n">3+</div><div class="stat-l">Prodotti AI</div></div>
+    <div><div class="stat-n">4+</div><div class="stat-l">Prodotti AI</div></div>
     <div><div class="stat-n">NIST</div><div class="stat-l">Ready</div></div>
     <div><div class="stat-n">100%</div><div class="stat-l">Made in Italy</div></div>
   </div>
@@ -283,12 +316,18 @@
       <div class="prod-name">QuantumCyberLabs</div>
       <p class="prod-desc">Threat intelligence avanzata.</p>
     </a>
+
+    <a href="https://www.quantumcointech.com" target="_blank" class="prod-sentinella">
+      <div class="prod-badge">Nuovo</div>
+      <div class="prod-name">SentinellaAI</div>
+      <p class="prod-desc">Sorveglianza epidemiologica predittiva per il SSN. Analisi AI in linguaggio naturale per Ministero, Regioni e ASL.</p>
+    </a>
   </div>
 </section>
 
 <section id="mission">
   <blockquote class="mission-quote">"La minaccia quantistica è reale."</blockquote>
-  <p class="mission-body">QuantumHorizon prepara l’Italia alla crittografia post-quantistica.</p>
+  <p class="mission-body">QuantumHorizon prepara l'Italia alla crittografia post-quantistica.</p>
 </section>
 
 <section id="investors">
