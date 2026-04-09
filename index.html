@@ -5,258 +5,130 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>QuantumHorizon — AI & Quantum Intelligence Hub</title>
 <meta name="description" content="QuantumHorizon sviluppa piattaforme AI per la difesa post-quantistica, la cybersecurity istituzionale e l'intelligenza strategica. Made in Italy.">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Syne:wght@400;500;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg:    #F8F6F1;
-  --bg2:   #FFFFFF;
-  --bg3:   #F2EFE8;
-  --gold:  #9A7B2F;
-  --gold2: #B8962E;
-  --gold-light: #F5EDD6;
-  --green: #0F6E56;
-  --green-light: #E1F5EE;
-  --red:   #8B2318;
-  --red-light: #FAECE7;
-  --text:  #1A1A1A;
-  --muted: #5A5A5A;
-  --border: rgba(154,123,47,0.18);
-  --border2: rgba(0,0,0,0.08);
-  --shadow: 0 2px 16px rgba(0,0,0,0.06);
+  --paper: #f5f3ef;
+  --cream: #ece8e0;
+  --ink: #1a1a2e;
+  --mid: #6b6560;
+  --border: #d4cdc3;
+  --white: #ffffff;
+  --gold: #b8860b;
+  --gold2: #c8981a;
+  --blue: #1a3a6e;
+  --green: #1a6b4a;
+  --red: #c0392b;
+  --card: #ffffff;
 }
 html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; overflow-x: hidden; }
+body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
 
-/* NAV */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--ink); padding: 0 3rem; height: 64px;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 3.5rem; height: 64px;
-  background: rgba(248,246,241,0.95); backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+  border-bottom: 3px solid var(--gold2); position: sticky; top: 0; z-index: 100;
 }
-.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
 .nav-hex {
-  background: var(--gold); color: #fff;
-  font-size: 9px; font-weight: 800; padding: 4px 6px;
+  width: 30px; height: 30px; background: var(--gold2);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8px; font-weight: 800; color: var(--ink); font-family: 'DM Mono', monospace;
 }
-.nav-wordmark { font-weight: 700; font-size: 1rem; color: var(--text); letter-spacing: 0.5px; }
+.nav-wordmark { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: #fff; }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { text-decoration: none; color: var(--muted); font-size: 0.82rem; transition: color 0.2s; letter-spacing: 0.5px; }
-.nav-links a:hover { color: var(--text); }
-.nav-cta {
-  border: 1px solid var(--gold); padding: 6px 16px;
-  text-decoration: none; color: var(--gold);
-  font-size: 0.78rem; font-weight: 600; letter-spacing: 1px;
-  transition: all 0.2s;
-}
-.nav-cta:hover { background: var(--gold); color: #fff; }
-
-/* LANG TOGGLE */
+.nav-links a { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: rgba(255,255,255,0.8); }
+.nav-right { display: flex; align-items: center; gap: 0.75rem; }
 .lang-toggle { display: flex; gap: 0.25rem; }
-.lang-btn {
-  background: transparent; border: 1px solid rgba(154,123,47,0.25);
-  color: var(--muted); padding: 3px 8px;
-  font-size: 0.65rem; font-family: 'DM Mono', monospace;
-  cursor: pointer; transition: all 0.2s; letter-spacing: 1px;
-}
-.lang-btn.active { background: var(--gold); border-color: var(--gold); color: #fff; }
+.lang-btn { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.4); padding: 4px 10px; font-size: 0.65rem; font-family: 'DM Mono', monospace; cursor: pointer; border-radius: 2px; transition: all 0.2s; letter-spacing: 1px; }
+.lang-btn.active { background: var(--gold2); border-color: var(--gold2); color: #fff; font-weight: 700; }
+.nav-cta { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 1px; text-transform: uppercase; color: var(--gold2); border: 1px solid var(--gold2); padding: 6px 14px; text-decoration: none; border-radius: 2px; transition: all 0.2s; }
+.nav-cta:hover { background: var(--gold2); color: #fff; }
 
-/* HERO */
-.hero {
-  min-height: 100vh; display: flex; flex-direction: column;
-  justify-content: center; padding: 8rem 3.5rem 5rem;
-  position: relative; z-index: 1;
-  background: linear-gradient(160deg, #F8F6F1 60%, #F0EBD8 100%);
-}
-.hero-eyebrow {
-  font-family: 'DM Mono', monospace; font-size: 0.68rem;
-  letter-spacing: 3px; text-transform: uppercase; color: var(--gold);
-  display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem;
-}
-.hero-eyebrow::after { content: ''; flex: 1; max-width: 80px; height: 1px; background: var(--gold); opacity: 0.35; }
-.hero h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 7vw, 6.5rem);
-  font-weight: 300; line-height: 1.05; color: var(--text);
-  max-width: 900px; margin-bottom: 1.5rem;
-}
-.hero h1 em { color: var(--gold); font-style: italic; }
-.hero-p {
-  font-size: 1rem; color: var(--muted); max-width: 580px;
-  line-height: 1.75; font-weight: 400; margin-bottom: 2.5rem;
-}
-.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; }
-.btn-gold {
-  background: var(--gold); color: #fff; padding: 0.8rem 2rem;
-  text-decoration: none; font-weight: 700; font-size: 0.85rem;
-  letter-spacing: 0.5px; transition: all 0.2s;
-}
-.btn-gold:hover { background: var(--gold2); }
-.btn-ghost {
-  border: 1px solid rgba(0,0,0,0.2); padding: 0.8rem 2rem;
-  color: var(--text); text-decoration: none; font-size: 0.85rem;
-  transition: all 0.2s; background: transparent;
-}
-.btn-ghost:hover { border-color: var(--text); background: rgba(0,0,0,0.03); }
-.hero-stats {
-  display: flex; gap: 3rem; padding-top: 2.5rem;
-  border-top: 1px solid var(--border); flex-wrap: wrap;
-}
-.stat-n { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--gold); line-height: 1; font-weight: 600; }
-.stat-l { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 0.3rem; }
+.hero { background: var(--cream); border-bottom: 1px solid var(--border); padding: 5rem 3rem 4rem; }
+.hero-inner { max-width: 900px; margin: 0 auto; }
+.hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+.hero-eyebrow::after { content: ''; width: 40px; height: 1px; background: var(--gold); opacity: 0.4; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 900; line-height: 1.08; color: var(--ink); margin-bottom: 1.25rem; }
+.hero h1 em { font-style: italic; color: var(--gold2); }
+.hero-sub { font-size: 1rem; color: var(--mid); max-width: 600px; line-height: 1.75; font-weight: 300; margin-bottom: 2.5rem; }
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+.btn-gold { background: var(--gold2); color: #fff; padding: 0.8rem 2rem; text-decoration: none; font-weight: 600; font-size: 0.88rem; border-radius: 3px; transition: background 0.2s; }
+.btn-gold:hover { background: var(--gold); }
+.btn-outline { border: 1px solid var(--border); padding: 0.8rem 2rem; color: var(--ink); text-decoration: none; font-size: 0.88rem; border-radius: 3px; transition: all 0.2s; }
+.btn-outline:hover { border-color: var(--ink); }
+.hero-stats { display: flex; gap: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
+.stat-n { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: var(--gold2); font-weight: 700; line-height: 1; }
+.stat-l { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid); margin-top: 0.3rem; }
 
-/* SECTION */
-.section { padding: 6rem 3.5rem; position: relative; z-index: 1; }
-.sec-eyebrow {
-  font-family: 'DM Mono', monospace; font-size: 0.65rem;
-  letter-spacing: 3px; text-transform: uppercase; color: var(--gold);
-  margin-bottom: 0.75rem; display: block;
-}
-.sec-h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400;
-  color: var(--text); margin-bottom: 3rem;
-}
-.sec-h2 span { color: var(--gold); }
+hr { border: none; border-top: 1px solid var(--border); margin: 0; }
 
-/* FEATURED PRODUCT */
-.featured {
-  display: block; padding: 2.5rem 2rem;
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--gold);
-  text-decoration: none; color: var(--text);
-  background: var(--bg2);
-  box-shadow: var(--shadow);
-  transition: all 0.25s; margin-bottom: 1.5rem;
-  position: relative; overflow: hidden;
-}
-.featured:hover { border-color: var(--gold); box-shadow: 0 4px 32px rgba(154,123,47,0.12); }
-.fp-tag {
-  font-family: 'DM Mono', monospace; font-size: 0.62rem;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 0.75rem; display: block;
-}
-.fp-name { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text); }
-.fp-desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; max-width: 600px; }
-.fp-arrow { position: absolute; right: 2rem; top: 50%; transform: translateY(-50%); color: var(--gold); font-size: 1.5rem; opacity: 0.4; transition: opacity 0.2s; }
+.section { padding: 5rem 3rem; }
+.section-inner { max-width: 980px; margin: 0 auto; }
+.sec-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; display: block; }
+.sec-h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--ink); margin-bottom: 3rem; }
+.sec-h2 span { color: var(--gold2); }
+
+.featured { display: block; padding: 2.5rem; margin-bottom: 1.5rem; border: 1px solid var(--border); border-left: 4px solid var(--gold2); background: var(--white); text-decoration: none; color: var(--ink); border-radius: 4px; transition: all 0.25s; position: relative; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.featured:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.09); transform: translateY(-2px); }
+.fp-tag { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; display: block; }
+.fp-name { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+.fp-desc { color: var(--mid); font-size: 0.88rem; line-height: 1.65; max-width: 620px; }
+.fp-arrow { position: absolute; right: 2rem; top: 50%; transform: translateY(-50%); color: var(--gold2); font-size: 1.5rem; opacity: 0.5; transition: opacity 0.2s; }
 .featured:hover .fp-arrow { opacity: 1; }
 
-/* PRODUCTS GRID */
-.prods-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; margin-bottom: 1rem;
-}
+.prods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1rem; }
 .prods-grid-2 { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 900px) { .prods-grid, .prods-grid-2 { grid-template-columns: 1fr; } }
 
-.prod-card {
-  padding: 1.75rem; border: 1px solid var(--border2);
-  border-left: 2px solid var(--gold);
-  text-decoration: none; color: var(--text);
-  background: var(--bg2);
-  box-shadow: var(--shadow);
-  transition: all 0.2s;
-  display: block; position: relative;
-}
-.prod-card:hover { border-color: var(--gold); box-shadow: 0 4px 24px rgba(154,123,47,0.1); background: var(--bg2); }
+.prod-card { padding: 1.75rem; border: 1px solid var(--border); border-left: 3px solid var(--gold2); background: var(--white); text-decoration: none; color: var(--ink); border-radius: 4px; transition: all 0.2s; display: block; position: relative; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+.prod-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.09); transform: translateY(-2px); }
 .prod-card.green { border-left-color: var(--green); }
-.prod-card.green:hover { border-color: var(--green); box-shadow: 0 4px 24px rgba(15,110,86,0.1); }
 .prod-card.red { border-left-color: var(--red); }
-.prod-card.red:hover { border-color: var(--red); box-shadow: 0 4px 24px rgba(139,35,24,0.1); }
 
-.prod-badge {
-  font-family: 'DM Mono', monospace; font-size: 0.58rem;
-  letter-spacing: 1.5px; text-transform: uppercase;
-  padding: 2px 8px; border-radius: 2px;
-  display: inline-block; margin-bottom: 0.75rem; font-weight: 500;
-}
-.badge-gold { background: var(--gold-light); color: var(--gold); }
-.badge-green { background: var(--green-light); color: var(--green); }
-.badge-red { background: var(--red-light); color: var(--red); }
+.prod-badge { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; display: inline-block; margin-bottom: 0.75rem; }
+.badge-gold { background: rgba(184,134,11,0.1); color: var(--gold); }
+.badge-green { background: rgba(26,107,74,0.1); color: var(--green); }
+.badge-red { background: rgba(192,57,43,0.1); color: var(--red); }
+.badge-abs { position: absolute; top: 1rem; right: 1rem; font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 1.5px; text-transform: uppercase; background: var(--green); color: #fff; padding: 2px 8px; border-radius: 2px; }
 
-.prod-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text); }
+.prod-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--ink); }
 .prod-name.gold { color: var(--gold); }
 .prod-name.green { color: var(--green); }
 .prod-name.red { color: var(--red); }
-.prod-desc { color: var(--muted); font-size: 0.82rem; line-height: 1.6; }
+.prod-desc { color: var(--mid); font-size: 0.82rem; line-height: 1.6; }
 
-.badge-abs {
-  position: absolute; top: 1rem; right: 1rem;
-  font-family: 'DM Mono', monospace; font-size: 0.55rem;
-  letter-spacing: 1.5px; text-transform: uppercase;
-  background: var(--green); color: #fff;
-  padding: 2px 8px; border-radius: 2px;
-}
+.mission-wrap { max-width: 780px; }
+.mission-quote { font-family: 'Playfair Display', serif; font-size: clamp(1.2rem, 2.5vw, 1.7rem); font-style: italic; color: var(--ink); line-height: 1.45; padding-left: 1.5rem; border-left: 3px solid var(--gold2); margin-bottom: 1.5rem; }
+.mission-body { font-size: 0.92rem; color: var(--mid); line-height: 1.8; }
+.mission-body strong { color: var(--ink); font-weight: 600; }
 
-/* DIVIDER */
-.divider {
-  border: none; border-top: 1px solid var(--border);
-  margin: 0 3.5rem;
-}
-
-/* MISSION */
-.mission-wrap { max-width: 800px; }
-.mission-quote {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
-  font-style: italic; color: var(--gold);
-  line-height: 1.4; margin-bottom: 1.5rem;
-  padding-left: 1.5rem; border-left: 2px solid var(--gold);
-}
-.mission-body { color: var(--muted); line-height: 1.8; font-size: 0.95rem; }
-.mission-body strong { color: var(--text); }
-
-/* INVESTORS */
 .inv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
 @media (max-width: 600px) { .inv-grid { grid-template-columns: 1fr; } }
-.inv-box {
-  padding: 2rem; border: 1px solid var(--border);
-  background: var(--bg2); text-align: center;
-  box-shadow: var(--shadow);
-}
-.inv-n { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold); font-weight: 600; line-height: 1; }
-.inv-l { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 0.5rem; }
-.inv-desc { font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.5; }
+.inv-box { padding: 2rem; border: 1px solid var(--border); border-top: 3px solid var(--gold2); background: var(--white); border-radius: 3px; }
+.inv-n { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--gold2); font-weight: 700; line-height: 1; }
+.inv-l { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid); margin-top: 0.5rem; }
+.inv-desc { font-size: 0.8rem; color: var(--mid); margin-top: 0.5rem; line-height: 1.55; }
 
-/* CONTACT */
-.contact-wrap {
-  background: var(--bg3); border: 1px solid var(--border);
-  padding: 3rem; text-align: center; margin-top: 2rem;
-}
-.contact-wrap h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem; font-weight: 400; color: var(--text); margin-bottom: 0.75rem;
-}
-.contact-wrap p { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.5rem; }
+.contact-wrap { background: var(--ink); color: #fff; padding: 3rem; text-align: center; border-radius: 4px; margin-top: 2rem; }
+.contact-wrap h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; }
+.contact-wrap p { color: rgba(255,255,255,0.5); font-size: 0.88rem; margin-bottom: 1.5rem; }
 
-/* FOOTER */
-footer {
-  padding: 2rem 3.5rem; border-top: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 1rem; position: relative; z-index: 1;
-  background: var(--bg3);
-}
-.foot-logo { font-weight: 700; color: var(--text); font-size: 0.9rem; }
+footer { background: var(--ink); color: rgba(255,255,255,0.3); padding: 2rem 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.foot-logo { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--gold2); }
 .foot-links { display: flex; gap: 1.5rem; }
-.foot-links a {
-  font-family: 'DM Mono', monospace; font-size: 0.6rem;
-  letter-spacing: 1px; text-transform: uppercase;
-  color: var(--muted); text-decoration: none; transition: color 0.2s;
-}
-.foot-links a:hover { color: var(--text); }
-.foot-copy { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 1px; color: var(--muted); }
+.foot-links a { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+.foot-links a:hover { color: rgba(255,255,255,0.7); }
+.foot-copy { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 1px; }
 
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
   .nav-links { display: none; }
-  .hero { padding: 7rem 1.5rem 4rem; }
-  .section { padding: 4rem 1.5rem; }
-  .divider { margin: 0 1.5rem; }
+  .hero { padding: 3.5rem 1.5rem 3rem; }
+  .section { padding: 3.5rem 1.5rem; }
   footer { padding: 1.5rem; flex-direction: column; text-align: center; }
 }
 </style>
@@ -274,7 +146,7 @@ footer {
     <li><a href="#investors">Investitori</a></li>
     <li><a href="#contact">Contatti</a></li>
   </ul>
-  <div style="display:flex;align-items:center;gap:1rem;">
+  <div class="nav-right">
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('it')">IT</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
@@ -283,120 +155,120 @@ footer {
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow" data-it="Italian AI & Quantum Defense Startup · Fondato 2025" data-en="Italian AI & Quantum Defense Startup · Founded 2025">Italian AI & Quantum Defense Startup · Fondato 2025</div>
-  <h1>
-    <span data-it="Il futuro della<br>sicurezza digitale<br><em>inizia qui</em>" data-en="The future of<br>digital security<br><em>starts here</em>">Il futuro della<br>sicurezza digitale<br><em>inizia qui</em></span>
-  </h1>
-  <p class="hero-p" data-it="QuantumHorizon sviluppa piattaforme AI per la difesa post-quantistica, la cybersecurity istituzionale e l'intelligenza strategica. Strumenti concreti per chi prende decisioni." data-en="QuantumHorizon develops AI platforms for post-quantum defense, institutional cybersecurity and strategic intelligence. Concrete tools for decision makers.">QuantumHorizon sviluppa piattaforme AI per la difesa post-quantistica, la cybersecurity istituzionale e l'intelligenza strategica. Strumenti concreti per chi prende decisioni.</p>
-  <div class="hero-btns">
-    <a href="#products" class="btn-gold" data-it="Esplora i prodotti →" data-en="Explore products →">Esplora i prodotti →</a>
-    <a href="#investors" class="btn-ghost" data-it="Per investitori" data-en="For investors">Per investitori</a>
-  </div>
-  <div class="hero-stats">
-    <div class="stat"><div class="stat-n">6+</div><div class="stat-l" data-it="Piattaforme AI" data-en="AI Platforms">Piattaforme AI</div></div>
-    <div class="stat"><div class="stat-n">NIST</div><div class="stat-l" data-it="Standard post-quantum" data-en="Post-quantum standard">Standard post-quantum</div></div>
-    <div class="stat"><div class="stat-n">100%</div><div class="stat-l" data-it="Made in Italy" data-en="Made in Italy">Made in Italy</div></div>
-    <div class="stat"><div class="stat-n">AI</div><div class="stat-l" data-it="Powered by Claude" data-en="Powered by Claude">Powered by Claude</div></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow" data-it="Italian AI & Quantum Defense Startup · Fondato 2025" data-en="Italian AI & Quantum Defense Startup · Founded 2025">Italian AI & Quantum Defense Startup · Fondato 2025</div>
+    <h1 data-it="Il futuro della<br>sicurezza digitale<br><em>inizia qui</em>" data-en="The future of<br>digital security<br><em>starts here</em>">Il futuro della<br>sicurezza digitale<br><em>inizia qui</em></h1>
+    <p class="hero-sub" data-it="QuantumHorizon sviluppa piattaforme AI per la difesa post-quantistica, la cybersecurity istituzionale e l'intelligenza strategica. Strumenti concreti per chi prende decisioni." data-en="QuantumHorizon develops AI platforms for post-quantum defense, institutional cybersecurity and strategic intelligence. Concrete tools for decision makers.">QuantumHorizon sviluppa piattaforme AI per la difesa post-quantistica, la cybersecurity istituzionale e l'intelligenza strategica. Strumenti concreti per chi prende decisioni.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-gold" data-it="Esplora i prodotti →" data-en="Explore products →">Esplora i prodotti →</a>
+      <a href="#investors" class="btn-outline" data-it="Per investitori" data-en="For investors">Per investitori</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-n">6+</div><div class="stat-l" data-it="Piattaforme AI" data-en="AI Platforms">Piattaforme AI</div></div>
+      <div><div class="stat-n">NIST</div><div class="stat-l" data-it="Standard post-quantum" data-en="Post-quantum standard">Standard post-quantum</div></div>
+      <div><div class="stat-n">100%</div><div class="stat-l" data-it="Made in Italy" data-en="Made in Italy">Made in Italy</div></div>
+      <div><div class="stat-n">AI</div><div class="stat-l" data-it="Powered by Claude" data-en="Powered by Claude">Powered by Claude</div></div>
+    </div>
   </div>
 </section>
 
-<hr class="divider">
+<hr>
 
-<!-- PRODUCTS -->
 <section class="section" id="products">
-  <span class="sec-eyebrow" data-it="Ecosistema" data-en="Ecosystem">Ecosistema</span>
-  <h2 class="sec-h2"><span data-it="Le nostre" data-en="Our">Le nostre</span> <span data-it="piattaforme" data-en="platforms">piattaforme</span></h2>
+  <div class="section-inner">
+    <span class="sec-eyebrow" data-it="Ecosistema" data-en="Ecosystem">Ecosistema</span>
+    <h2 class="sec-h2" data-it="Le nostre <span>piattaforme</span>" data-en="Our <span>platforms</span>">Le nostre <span>piattaforme</span></h2>
 
-  <a href="https://qstrategix.com" target="_blank" class="featured">
-    <span class="fp-tag" data-it="Piattaforma flagship · Quantum Defense Intelligence" data-en="Flagship platform · Quantum Defense Intelligence">Piattaforma flagship · Quantum Defense Intelligence</span>
-    <div class="fp-name">Q-STRATEGIX</div>
-    <p class="fp-desc" data-it="Tre moduli integrati per la difesa post-quantistica: Q-Assessment (valutazione rischio), Q-Defense (analisi vulnerabilità), Q-Shield (protezione attiva). Per CISO, PA e infrastrutture critiche." data-en="Three integrated modules for post-quantum defense: Q-Assessment (risk assessment), Q-Defense (vulnerability analysis), Q-Shield (active protection). For CISOs, government and critical infrastructure.">Tre moduli integrati per la difesa post-quantistica: Q-Assessment (valutazione rischio), Q-Defense (analisi vulnerabilità), Q-Shield (protezione attiva). Per CISO, PA e infrastrutture critiche.</p>
-    <span class="fp-arrow">→</span>
-  </a>
-
-  <div class="prods-grid" style="margin-bottom:1rem;">
-    <a href="https://quantumcyberlabs.com" target="_blank" class="prod-card">
-      <span class="prod-badge badge-gold" data-it="Cybersecurity · AI" data-en="Cybersecurity · AI">Cybersecurity · AI</span>
-      <div class="prod-name gold">Quantum Risk Advisor</div>
-      <p class="prod-desc" data-it="Assessment post-quantistico in 10 minuti. Report executive con Quantum Risk Score e roadmap NIST-compliant." data-en="Post-quantum assessment in 10 minutes. Executive report with Quantum Risk Score and NIST-compliant roadmap.">Assessment post-quantistico in 10 minuti. Report executive con Quantum Risk Score e roadmap NIST-compliant.</p>
+    <a href="https://qstrategix.com" target="_blank" class="featured">
+      <span class="fp-tag" data-it="Piattaforma flagship · Quantum Defense Intelligence" data-en="Flagship platform · Quantum Defense Intelligence">Piattaforma flagship · Quantum Defense Intelligence</span>
+      <div class="fp-name">Q-STRATEGIX</div>
+      <p class="fp-desc" data-it="Tre moduli integrati per la difesa post-quantistica: Q-Assessment, Q-Defense e Q-Shield. Per CISO, PA e infrastrutture critiche." data-en="Three integrated modules for post-quantum defense: Q-Assessment, Q-Defense and Q-Shield. For CISOs, government and critical infrastructure.">Tre moduli integrati per la difesa post-quantistica: Q-Assessment, Q-Defense e Q-Shield. Per CISO, PA e infrastrutture critiche.</p>
+      <span class="fp-arrow">→</span>
     </a>
 
-    <a href="https://quantumcyberlabs.com/politicalab.html" target="_blank" class="prod-card red">
-      <span class="badge-abs" data-it="Nuovo" data-en="New">Nuovo</span>
-      <span class="prod-badge badge-red" data-it="Comunicazione Politica · AI" data-en="Political Communication · AI">Comunicazione Politica · AI</span>
-      <div class="prod-name red">PoliticaLab</div>
-      <p class="prod-desc" data-it="Advisor AI per candidati e liste locali. Framing ottimale, parole a rischio, messaggi chiave calibrati sul territorio." data-en="AI advisor for candidates and local lists. Optimal framing, risky words, key messages calibrated to the territory.">Advisor AI per candidati e liste locali. Framing ottimale, parole a rischio, messaggi chiave calibrati sul territorio.</p>
-    </a>
+    <div class="prods-grid" style="margin-bottom:1rem;">
+      <a href="https://quantumcyberlabs.com" target="_blank" class="prod-card">
+        <span class="prod-badge badge-gold" data-it="Cybersecurity · AI" data-en="Cybersecurity · AI">Cybersecurity · AI</span>
+        <div class="prod-name gold">Quantum Risk Advisor</div>
+        <p class="prod-desc" data-it="Assessment post-quantistico in 10 minuti. Quantum Risk Score e roadmap NIST-compliant per CISO e PA." data-en="Post-quantum assessment in 10 minutes. Quantum Risk Score and NIST-compliant roadmap.">Assessment post-quantistico in 10 minuti. Quantum Risk Score e roadmap NIST-compliant per CISO e PA.</p>
+      </a>
+      <a href="https://quantumcyberlabs.com/politicalab.html" target="_blank" class="prod-card red">
+        <span class="badge-abs" data-it="Nuovo" data-en="New">Nuovo</span>
+        <span class="prod-badge badge-red" data-it="Comunicazione Politica · AI" data-en="Political Communication · AI">Comunicazione Politica · AI</span>
+        <div class="prod-name red">PoliticaLab</div>
+        <p class="prod-desc" data-it="Advisor AI per candidati e liste locali. Framing ottimale, parole a rischio e messaggi chiave calibrati sul territorio." data-en="AI advisor for candidates and local lists. Optimal framing, risky words and key messages calibrated to the territory.">Advisor AI per candidati e liste locali. Framing ottimale, parole a rischio e messaggi chiave calibrati sul territorio.</p>
+      </a>
+      <a href="https://qcryptohub.com" target="_blank" class="prod-card">
+        <span class="prod-badge badge-gold" data-it="Procurement · PA" data-en="Procurement · Government">Procurement · PA</span>
+        <div class="prod-name gold">QCryptoHub</div>
+        <p class="prod-desc" data-it="Generatore AI di documentazione per appalti pubblici. Capitolati e specifiche tecniche conformi al Codice degli Appalti." data-en="AI generator for public procurement documentation. Specifications and technical documents compliant with Italian procurement code.">Generatore AI di documentazione per appalti pubblici. Capitolati e specifiche tecniche conformi al Codice degli Appalti.</p>
+      </a>
+    </div>
 
-    <a href="https://qcryptohub.com" target="_blank" class="prod-card">
-      <span class="prod-badge badge-gold" data-it="Procurement · PA" data-en="Procurement · Government">Procurement · PA</span>
-      <div class="prod-name gold">Procurement AI</div>
-      <p class="prod-desc" data-it="Generatore AI di documentazione per appalti pubblici. Capitolati, bandi e specifiche tecniche conformi al Codice degli Appalti." data-en="AI generator for public procurement documentation. Specifications and technical documents compliant with Italian procurement code.">Generatore AI di documentazione per appalti pubblici. Capitolati, bandi e specifiche tecniche conformi al Codice degli Appalti.</p>
-    </a>
-  </div>
-
-  <div class="prods-grid prods-grid-2">
-    <a href="https://sentinellaai.onrender.com" target="_blank" class="prod-card green">
-      <span class="prod-badge badge-green" data-it="Sanità · Sorveglianza" data-en="Healthcare · Surveillance">Sanità · Sorveglianza</span>
-      <div class="prod-name green">SentinellaAI</div>
-      <p class="prod-desc" data-it="Sorveglianza epidemiologica predittiva per il SSN. Analisi AI in linguaggio naturale per Ministero, Regioni e ASL." data-en="Predictive epidemiological surveillance for the NHS. AI analysis in natural language for Ministry, Regions and ASL.">Sorveglianza epidemiologica predittiva per il SSN. Analisi AI in linguaggio naturale per Ministero, Regioni e ASL.</p>
-    </a>
-
-    <a href="https://quantumhorizon.it" target="_blank" class="prod-card">
-      <span class="prod-badge badge-gold" data-it="Threat Intelligence · Editoriale" data-en="Threat Intelligence · Editorial">Threat Intelligence · Editoriale</span>
-      <div class="prod-name gold">QuantumHorizon Portal</div>
-      <p class="prod-desc" data-it="Portale editoriale di quantum threat intelligence. Analisi, report e aggiornamenti sulla minaccia post-quantistica per il mercato italiano." data-en="Editorial portal for quantum threat intelligence. Analysis, reports and updates on the post-quantum threat for the Italian market.">Portale editoriale di quantum threat intelligence. Analisi, report e aggiornamenti sulla minaccia post-quantistica per il mercato italiano.</p>
-    </a>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- MISSION -->
-<section class="section" id="mission">
-  <span class="sec-eyebrow" data-it="La nostra visione" data-en="Our vision">La nostra visione</span>
-  <div class="mission-wrap">
-    <blockquote class="mission-quote" data-it='"La minaccia quantistica è reale. L'Italia deve essere pronta."' data-en='"The quantum threat is real. Italy must be ready."'>"La minaccia quantistica è reale. L'Italia deve essere pronta."</blockquote>
-    <p class="mission-body" data-it="QuantumHorizon nasce con una missione precisa: <strong>preparare le organizzazioni italiane alla transizione post-quantistica</strong> prima che i computer quantistici rendano obsoleta l'intera infrastruttura crittografica attuale.<br><br>I computer quantistici non minacciano direttamente i sistemi AI — minacciano la <strong>crittografia che protegge ogni comunicazione, ogni dato, ogni infrastruttura critica</strong>. RSA, ECC e tutti gli algoritmi asimmetrici oggi in uso saranno vulnerabili entro il 2030.<br><br>Il NIST ha già pubblicato i nuovi standard (FIPS 203/204/205). La finestra per migrare si sta chiudendo." data-en="QuantumHorizon was born with a precise mission: <strong>prepare Italian organizations for the post-quantum transition</strong> before quantum computers render the entire current cryptographic infrastructure obsolete.<br><br>Quantum computers do not directly threaten AI systems — they threaten the <strong>cryptography that protects every communication, every piece of data, every critical infrastructure</strong>. RSA, ECC and all asymmetric algorithms currently in use will be vulnerable by 2030.<br><br>NIST has already published the new standards (FIPS 203/204/205). The migration window is closing.">QuantumHorizon nasce con una missione precisa: <strong>preparare le organizzazioni italiane alla transizione post-quantistica</strong> prima che i computer quantistici rendano obsoleta l'intera infrastruttura crittografica attuale.<br><br>I computer quantistici non minacciano direttamente i sistemi AI — minacciano la <strong>crittografia che protegge ogni comunicazione, ogni dato, ogni infrastruttura critica</strong>. RSA, ECC e tutti gli algoritmi asimmetrici oggi in uso saranno vulnerabili entro il 2030.<br><br>Il NIST ha già pubblicato i nuovi standard (FIPS 203/204/205). La finestra per migrare si sta chiudendo.</p>
+    <div class="prods-grid prods-grid-2">
+      <a href="https://healthhorizon.it" target="_blank" class="prod-card green">
+        <span class="prod-badge badge-green" data-it="Sanità · AI · PNRR" data-en="Healthcare · AI · PNRR">Sanità · AI · PNRR</span>
+        <div class="prod-name green">HealthHorizon</div>
+        <p class="prod-desc" data-it="Hub AI per la sanità pubblica italiana: SentinellaAI (sorveglianza epidemiologica predittiva) e PNRR Sanità Intelligence (Missione 6). Per ASL, Regioni e Ministero della Salute." data-en="AI hub for Italian public healthcare: SentinellaAI (predictive epidemiological surveillance) and PNRR Health Intelligence (Mission 6). For ASL, Regions and Ministry of Health.">Hub AI per la sanità pubblica italiana: SentinellaAI (sorveglianza epidemiologica predittiva) e PNRR Sanità Intelligence (Missione 6). Per ASL, Regioni e Ministero della Salute.</p>
+      </a>
+      <a href="https://quantumhorizon.it" target="_blank" class="prod-card">
+        <span class="prod-badge badge-gold" data-it="Threat Intelligence · Editoriale" data-en="Threat Intelligence · Editorial">Threat Intelligence · Editoriale</span>
+        <div class="prod-name gold">QuantumHorizon Portal</div>
+        <p class="prod-desc" data-it="Portale editoriale di quantum threat intelligence. Analisi, report e aggiornamenti sulla minaccia post-quantistica per il mercato italiano." data-en="Editorial portal for quantum threat intelligence. Analysis, reports and updates on the post-quantum threat for the Italian market.">Portale editoriale di quantum threat intelligence. Analisi, report e aggiornamenti sulla minaccia post-quantistica per il mercato italiano.</p>
+      </a>
+    </div>
   </div>
 </section>
 
-<hr class="divider">
+<hr>
 
-<!-- INVESTORS -->
+<section class="section" id="mission" style="background: var(--cream);">
+  <div class="section-inner">
+    <span class="sec-eyebrow" data-it="La nostra visione" data-en="Our vision">La nostra visione</span>
+    <div class="mission-wrap">
+      <blockquote class="mission-quote">"La minaccia quantistica è reale. L'Italia deve essere pronta."</blockquote>
+      <p class="mission-body" data-it="QuantumHorizon nasce con una missione precisa: <strong>preparare le organizzazioni italiane alla transizione post-quantistica</strong> prima che i computer quantistici rendano obsoleta l'intera infrastruttura crittografica attuale.<br><br>I computer quantistici non minacciano direttamente i sistemi AI — minacciano la <strong>crittografia che protegge ogni comunicazione, ogni dato, ogni infrastruttura critica</strong>. RSA, ECC e tutti gli algoritmi asimmetrici oggi in uso saranno vulnerabili entro il 2030.<br><br>Il NIST ha già pubblicato i nuovi standard (FIPS 203/204/205). La finestra per migrare si sta chiudendo." data-en="QuantumHorizon was born with a precise mission: <strong>prepare Italian organizations for the post-quantum transition</strong> before quantum computers render the entire current cryptographic infrastructure obsolete.<br><br>Quantum computers do not directly threaten AI systems — they threaten the <strong>cryptography that protects every communication, every piece of data, every critical infrastructure</strong>. RSA, ECC and all asymmetric algorithms currently in use will be vulnerable by 2030.<br><br>NIST has already published the new standards (FIPS 203/204/205). The migration window is closing.">QuantumHorizon nasce con una missione precisa: <strong>preparare le organizzazioni italiane alla transizione post-quantistica</strong> prima che i computer quantistici rendano obsoleta l'intera infrastruttura crittografica attuale.<br><br>I computer quantistici non minacciano direttamente i sistemi AI — minacciano la <strong>crittografia che protegge ogni comunicazione, ogni dato, ogni infrastruttura critica</strong>. RSA, ECC e tutti gli algoritmi asimmetrici oggi in uso saranno vulnerabili entro il 2030.<br><br>Il NIST ha già pubblicato i nuovi standard (FIPS 203/204/205). La finestra per migrare si sta chiudendo.</p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
 <section class="section" id="investors">
-  <span class="sec-eyebrow" data-it="Opportunità di investimento" data-en="Investment opportunity">Opportunità di investimento</span>
-  <h2 class="sec-h2" data-it="Perché <span>adesso</span>" data-en="Why <span>now</span>">Perché <span>adesso</span></h2>
-  <div class="inv-grid">
-    <div class="inv-box">
-      <div class="inv-n">€1T+</div>
-      <div class="inv-l" data-it="Mercato globale PQC" data-en="Global PQC market">Mercato globale PQC</div>
-      <div class="inv-desc" data-it="Stima del mercato post-quantum cryptography entro il 2035" data-en="Estimated post-quantum cryptography market by 2035">Stima del mercato post-quantum cryptography entro il 2035</div>
-    </div>
-    <div class="inv-box">
-      <div class="inv-n">2030</div>
-      <div class="inv-l" data-it="Deadline NIST" data-en="NIST Deadline">Deadline NIST</div>
-      <div class="inv-desc" data-it="Anno entro cui le organizzazioni devono completare la migrazione post-quantum" data-en="Year by which organizations must complete post-quantum migration">Anno entro cui le organizzazioni devono completare la migrazione post-quantum</div>
-    </div>
-    <div class="inv-box">
-      <div class="inv-n">6+</div>
-      <div class="inv-l" data-it="Prodotti live" data-en="Live products">Prodotti live</div>
-      <div class="inv-desc" data-it="Piattaforme già operative con AI generativa integrata" data-en="Platforms already operational with integrated generative AI">Piattaforme già operative con AI generativa integrata</div>
+  <div class="section-inner">
+    <span class="sec-eyebrow" data-it="Opportunità di investimento" data-en="Investment opportunity">Opportunità di investimento</span>
+    <h2 class="sec-h2" data-it="Perché <span>adesso</span>" data-en="Why <span>now</span>">Perché <span>adesso</span></h2>
+    <div class="inv-grid">
+      <div class="inv-box">
+        <div class="inv-n">€1T+</div>
+        <div class="inv-l" data-it="Mercato globale PQC" data-en="Global PQC market">Mercato globale PQC</div>
+        <div class="inv-desc" data-it="Stima del mercato post-quantum cryptography entro il 2035" data-en="Estimated post-quantum cryptography market by 2035">Stima del mercato post-quantum cryptography entro il 2035</div>
+      </div>
+      <div class="inv-box">
+        <div class="inv-n">2030</div>
+        <div class="inv-l" data-it="Deadline NIST" data-en="NIST Deadline">Deadline NIST</div>
+        <div class="inv-desc" data-it="Anno entro cui le organizzazioni devono completare la migrazione post-quantum" data-en="Year by which organizations must complete post-quantum migration">Anno entro cui le organizzazioni devono completare la migrazione post-quantum</div>
+      </div>
+      <div class="inv-box">
+        <div class="inv-n">6+</div>
+        <div class="inv-l" data-it="Prodotti live" data-en="Live products">Prodotti live</div>
+        <div class="inv-desc" data-it="Piattaforme già operative con AI generativa integrata" data-en="Platforms already operational with integrated generative AI">Piattaforme già operative con AI generativa integrata</div>
+      </div>
     </div>
   </div>
 </section>
 
-<hr class="divider">
+<hr>
 
-<!-- CONTACT -->
 <section class="section" id="contact">
-  <span class="sec-eyebrow" data-it="Contatti" data-en="Contact">Contatti</span>
-  <div class="contact-wrap">
-    <h3 data-it="Parliamo del tuo progetto" data-en="Let's talk about your project">Parliamo del tuo progetto</h3>
-    <p data-it="Per partnership, investimenti, demo personalizzate o collaborazioni istituzionali." data-en="For partnerships, investments, custom demos or institutional collaborations.">Per partnership, investimenti, demo personalizzate o collaborazioni istituzionali.</p>
-    <a href="mailto:info@quantumhub.tech" class="btn-gold" data-it="info@quantumhub.tech" data-en="info@quantumhub.tech">info@quantumhub.tech</a>
+  <div class="section-inner">
+    <span class="sec-eyebrow" data-it="Contatti" data-en="Contact">Contatti</span>
+    <div class="contact-wrap">
+      <h3 data-it="Parliamo del tuo progetto" data-en="Let's talk about your project">Parliamo del tuo progetto</h3>
+      <p data-it="Per partnership, investimenti, demo personalizzate o collaborazioni istituzionali." data-en="For partnerships, investments, custom demos or institutional collaborations.">Per partnership, investimenti, demo personalizzate o collaborazioni istituzionali.</p>
+      <a href="mailto:info@quantumhub.tech" class="btn-gold">info@quantumhub.tech</a>
+    </div>
   </div>
 </section>
 
@@ -405,6 +277,7 @@ footer {
   <div class="foot-links">
     <a href="https://qstrategix.com" target="_blank">Q-STRATEGIX</a>
     <a href="https://quantumcyberlabs.com" target="_blank">QuantumCyberLabs</a>
+    <a href="https://healthhorizon.it" target="_blank">HealthHorizon</a>
     <a href="https://qcryptohub.com" target="_blank">QCryptoHub</a>
     <a href="https://quantumhorizon.it" target="_blank">QuantumHorizon.it</a>
   </div>
@@ -420,8 +293,8 @@ function setLang(lang) {
   document.querySelectorAll('[data-it]').forEach(el => {
     const txt = el.getAttribute('data-' + lang);
     if (!txt) return;
-    if (el.tagName === 'A' || el.tagName === 'BUTTON') { el.textContent = txt; }
-    else { el.innerHTML = txt; }
+    if (['A','BUTTON','SPAN','LI'].includes(el.tagName)) el.textContent = txt;
+    else el.innerHTML = txt;
   });
 }
 </script>
