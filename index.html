@@ -132,12 +132,31 @@ footer { background: var(--ink); color: rgba(255,255,255,0.3); padding: 2rem 3re
 .foot-links a:hover { color: rgba(255,255,255,0.7); }
 .foot-copy { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 1px; }
 
+.social-bar {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 200;
+  display: flex; align-items: center; gap: 0.5rem;
+  background: var(--ink); padding: 0.6rem 1rem; border-radius: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.social-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-right: 0.25rem; }
+.social-btn {
+  width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  text-decoration: none; font-weight: 700; font-size: 0.8rem; transition: transform 0.2s, opacity 0.2s; opacity: 0.85;
+}
+.social-btn:hover { transform: scale(1.15); opacity: 1; }
+.social-btn.fb { background: #1877F2; color: #fff; }
+.social-btn.li { background: #0A66C2; color: #fff; font-size: 0.7rem; }
+.social-btn.tw { background: #000; color: #fff; font-size: 0.85rem; }
+.social-btn.wa { background: #25D366; color: #fff; font-size: 0.75rem; font-family: 'DM Sans', sans-serif; }
+
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
   .nav-links { display: none; }
   .hero { padding: 3.5rem 1.5rem 3rem; }
   .section { padding: 3.5rem 1.5rem; }
   footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+  .social-bar { bottom: 1rem; right: 1rem; padding: 0.5rem 0.75rem; }
+  .social-label { display: none; }
 }
 </style>
 </head>
@@ -263,11 +282,11 @@ footer { background: var(--ink); color: rgba(255,255,255,0.3); padding: 2rem 3re
         <div class="prod-name" style="color:#E8772E;">🦅 USAINT</div>
         <p class="prod-desc" data-it="Grafo delle reti di influenza politica USA. Lobbying, PAC, finanziamenti elettorali e relazioni tra Casa Bianca, Congresso e media, da fonti pubbliche analizzate da Claude AI. Correlazioni, non accuse." data-en="Graph of US political influence networks. Lobbying, PACs, campaign funding and relations between the White House, Congress and media, from public sources analyzed by Claude AI. Correlations, not accusations.">Grafo delle reti di influenza politica USA. Lobbying, PAC, finanziamenti elettorali e relazioni tra Casa Bianca, Congresso e media, da fonti pubbliche analizzate da Claude AI. Correlazioni, non accuse.</p>
       </a>
-      <a href="https://nous-qjf6.onrender.com" target="_blank" class="prod-card" style="border-left-color:#6366f1;">
-        <span class="badge-abs" style="background:#6366f1;" data-it="Nuovo" data-en="New">Nuovo</span>
-        <span class="prod-badge" style="background:rgba(99,102,241,0.1);color:#6366f1;" data-it="Pensiero Aumentato · AI" data-en="Augmented Thinking · AI">Pensiero Aumentato · AI</span>
-        <div class="prod-name" style="color:#6366f1;">🧠 NOUS</div>
-        <p class="prod-desc" data-it="Il primo amplificatore di pensiero basato su AI. Scrivi un pensiero grezzo — anche confuso — e ricevi in secondi: pensiero chiarito, implicazioni nascoste, domande da farti, prossimo passo." data-en="The first AI-based thought amplifier. Write a raw thought — even a confused one — and get back in seconds: clarified thought, hidden implications, questions to ask yourself, next step.">Il primo amplificatore di pensiero basato su AI. Scrivi un pensiero grezzo — anche confuso — e ricevi in secondi: pensiero chiarito, implicazioni nascoste, domande da farti, prossimo passo.</p>
+      <a href="https://sanitapro.onrender.com" target="_blank" class="prod-card green">
+        <span class="badge-abs" data-it="Nuovo" data-en="New">Nuovo</span>
+        <span class="prod-badge badge-green" data-it="Sanità · AI · CCNL" data-en="Healthcare · AI · CCNL">Sanità · AI · CCNL</span>
+        <div class="prod-name green">🏥 SANITÀPRO</div>
+        <p class="prod-desc" data-it="Assistente AI per operatori del SSN: CCNL Sanità, concorsi pubblici in tempo reale da InPA, mobilità. Modello freemium con 5 domande gratis e abbonamento Premium a 4.99€/mese." data-en="AI assistant for Italian NHS workers: healthcare contracts, real-time public competitions, mobility. Freemium model with 5 free questions and Premium subscription at 4.99€/month.">Assistente AI per operatori del SSN: CCNL Sanità, concorsi pubblici in tempo reale da InPA, mobilità. Modello freemium con 5 domande gratis e abbonamento Premium a 4.99€/mese.</p>
       </a>
       <a href="https://qsen-backend.onrender.com" target="_blank" class="prod-card" style="border-left-color:#2BB6C4;">
         <span class="badge-abs" style="background:#2BB6C4;" data-it="Nuovo" data-en="New">Nuovo</span>
@@ -349,7 +368,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.3); padding: 2rem 3re
     <a href="https://quantumcyberlabs.com" target="_blank">QuantumCyberLabs</a>
     <a href="https://healthhorizon.it" target="_blank">HealthHorizon</a>
     <a href="https://qcryptohub.com" target="_blank">QCryptoHub</a>
-    <a href="https://nous-qjf6.onrender.com" target="_blank">NOUS</a>
+    <a href="https://sanitapro.onrender.com" target="_blank">SANITÀPRO</a>
     <a href="https://qsen-backend.onrender.com" target="_blank">QSEN</a>
     <a href="https://aerosentinel.onrender.com" target="_blank">AEROSENTINEL</a>
     <a href="https://geopolitical-radar-frontend.onrender.com" target="_blank">GEORADAR</a>
@@ -357,6 +376,14 @@ footer { background: var(--ink); color: rgba(255,255,255,0.3); padding: 2rem 3re
   </div>
   <div class="foot-copy">© 2025 QuantumHorizon · Made in Italy</div>
 </footer>
+
+<div class="social-bar">
+  <span class="social-label">Condividi</span>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fquantumhorizon-web.onrender.com" target="_blank" rel="noopener" class="social-btn fb" title="Condividi su Facebook">f</a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fquantumhorizon-web.onrender.com" target="_blank" rel="noopener" class="social-btn li" title="Condividi su LinkedIn">in</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fquantumhorizon-web.onrender.com&text=QuantumHorizon%20%E2%80%94%20AI%20%26%20Quantum%20Intelligence%20Hub%20%7C%20Made%20in%20Italy" target="_blank" rel="noopener" class="social-btn tw" title="Condividi su X">𝕏</a>
+  <a href="https://api.whatsapp.com/send?text=QuantumHorizon%20%E2%80%94%20AI%20%26%20Quantum%20Intelligence%20Hub%20https%3A%2F%2Fquantumhorizon-web.onrender.com" target="_blank" rel="noopener" class="social-btn wa" title="Condividi su WhatsApp">w</a>
+</div>
 
 <script>
 let currentLang = 'it';
